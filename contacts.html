@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты - Мой сайт</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navigation">
+        <a href="Index.html" class="nav-link">Обо мне</a>
+        <a href="contacts.html" class="nav-link active">Контакты</a>
+    </nav>
+
+    <header class="hero contacts-hero">
+        <div class="container">
+            <h1 class="fade-in">Свяжитесь со <span class="highlight">мной</span></h1>
+            <p class="subtitle">Я всегда открыт для новых предложений</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="contacts-wrapper">
+            <section class="contact-info">
+                <h2 class="section-title">Контактная информация</h2>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">📧</div>
+                    <div class="contact-details">
+                        <h3>Email</h3>
+                        <p>knyazev.swyatoslav@email.com</p>
+                    </div>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">📱</div>
+                    <div class="contact-details">
+                        <h3>Телефон</h3>
+                        <p>+7 (999) 123-45-67</p>
+                    </div>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">📍</div>
+                    <div class="contact-details">
+                        <h3>Адрес</h3>
+                        <p>г. Воронеж, ул. Теплоэнергетиков, д. 123</p>
+                    </div>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">🌐</div>
+                    <div class="contact-details">
+                        <h3>Социальные сети</h3>
+                        <div class="social-links">
+                            <a href="#" class="social-link">Telegram</a>
+                            <a href="#" class="social-link">VK</a>
+                            <a href="#" class="social-link">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="contact-form-section">
+                <h2 class="section-title">Форма обратной связи</h2>
+                
+                <form class="feedback-form" action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Ваше имя *</label>
+                        <input 
+                            type="text" 
+                            id="name" 
+                            name="name" 
+                            class="form-input" 
+                            placeholder="Введите ваше имя"
+                            required
+                        >
+                        <span class="form-hint">Минимум 2 символа</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email *</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            class="form-input" 
+                            placeholder="example@email.com"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comment" class="form-label">Текст комментария *</label>
+                        <textarea 
+                            id="comment" 
+                            name="comment" 
+                            class="form-textarea" 
+                            rows="5"
+                            placeholder="Напишите ваше сообщение..."
+                            required
+                        ></textarea>
+                        <span class="form-hint">Минимум 10 символов</span>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        <span>Отправить сообщение</span>
+                        <span class="btn-arrow">→</span>
+                    </button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Святослав Князев. Все права защищены.</p>
+    </footer>
+</body>
+</html>
