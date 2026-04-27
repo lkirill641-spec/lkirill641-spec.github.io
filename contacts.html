@@ -1,70 +1,84 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Контакты - Мой сайт</title>
+    <title>Контакты | Александр Петров</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Навигация -->
     <nav class="navigation">
-        <a href="Index.html" class="nav-link">Обо мне</a>
-        <a href="contacts.html" class="nav-link active">Контакты</a>
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">👨‍</span>
+                <span class="logo-text">Portfolio</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Главная</a></li>
+                <li><a href="contacts.html" class="nav-link active">Контакты</a></li>
+            </ul>
+        </div>
     </nav>
 
+    <!-- Hero секция -->
     <header class="hero contacts-hero">
-        <div class="container">
-            <h1 class="fade-in">Свяжитесь со <span class="highlight">мной</span></h1>
-            <p class="subtitle">Я всегда открыт для новых предложений</p>
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    Давайте <span class="gradient-text">общаться</span>
+                </h1>
+                <p class="hero-subtitle">Я всегда открыт для новых предложений</p>
+            </div>
         </div>
     </header>
 
-    <main class="container">
+    <!-- Основной контент -->
+    <main class="container section">
         <div class="contacts-wrapper">
+            <!-- Контактная информация -->
             <section class="contact-info">
-                <h2 class="section-title">Контактная информация</h2>
+                <h2 class="section-title">📬 Контакты</h2>
                 
-                <div class="contact-card">
-                    <div class="contact-icon">📧</div>
-                    <div class="contact-details">
-                        <h3>Email</h3>
-                        <p>knyazev.swyatoslav@email.com</p>
+                <div class="contact-cards">
+                    <div class="contact-card">
+                        <div class="contact-icon-wrapper">
+                            <span class="contact-icon">📧</span>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p>alexander.petrov@email.com</p>
+                        </div>
                     </div>
-                </div>
 
-                <div class="contact-card">
-                    <div class="contact-icon">📱</div>
-                    <div class="contact-details">
-                        <h3>Телефон</h3>
-                        <p>+7 (999) 123-45-67</p>
+                    <div class="contact-card">
+                        <div class="contact-icon-wrapper">
+                            <span class="contact-icon">📱</span>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Телефон</h3>
+                            <p>+7 (999) 123-45-67</p>
+                        </div>
                     </div>
-                </div>
 
-                <div class="contact-card">
-                    <div class="contact-icon">📍</div>
-                    <div class="contact-details">
-                        <h3>Адрес</h3>
-                        <p>г. Воронеж, ул. Теплоэнергетиков, д. 123</p>
-                    </div>
-                </div>
-
-                <div class="contact-card">
-                    <div class="contact-icon">🌐</div>
-                    <div class="contact-details">
-                        <h3>Социальные сети</h3>
-                        <div class="social-links">
-                            <a href="#" class="social-link">Telegram</a>
-                            <a href="#" class="social-link">VK</a>
-                            <a href="#" class="social-link">GitHub</a>
+                    <div class="contact-card">
+                        <div class="contact-icon-wrapper">
+                            <span class="contact-icon">📍</span>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Адрес</h3>
+                            <p>г. Санкт-Петербург, Россия</p>
                         </div>
                     </div>
                 </div>
             </section>
 
+            <!-- Форма обратной связи -->
             <section class="contact-form-section">
-                <h2 class="section-title">Форма обратной связи</h2>
+                <h2 class="section-title">✉️ Форма связи</h2>
                 
-                <form class="feedback-form" action="#" method="POST">
+                <form id="feedbackForm" class="feedback-form">
                     <div class="form-group">
                         <label for="name" class="form-label">Ваше имя *</label>
                         <input 
@@ -72,10 +86,9 @@
                             id="name" 
                             name="name" 
                             class="form-input" 
-                            placeholder="Введите ваше имя"
-                            required
+                            placeholder="Иван Иванов"
                         >
-                        <span class="form-hint">Минимум 2 символа</span>
+                        <span class="error-message" id="nameError"></span>
                     </div>
 
                     <div class="form-group">
@@ -86,34 +99,41 @@
                             name="email" 
                             class="form-input" 
                             placeholder="example@email.com"
-                            required
                         >
+                        <span class="error-message" id="emailError"></span>
                     </div>
 
                     <div class="form-group">
-                        <label for="comment" class="form-label">Текст комментария *</label>
+                        <label for="comment" class="form-label">Комментарий *</label>
                         <textarea 
                             id="comment" 
                             name="comment" 
                             class="form-textarea" 
-                            rows="5"
-                            placeholder="Напишите ваше сообщение..."
-                            required
+                            rows="6"
+                            placeholder="Ваше сообщение..."
                         ></textarea>
-                        <span class="form-hint">Минимум 10 символов</span>
+                        <span class="error-message" id="commentError"></span>
                     </div>
 
                     <button type="submit" class="submit-btn">
-                        <span>Отправить сообщение</span>
-                        <span class="btn-arrow">→</span>
+                        <span>Отправить</span>
+                        <span class="btn-icon">🚀</span>
                     </button>
                 </form>
+                
+                <div id="formResult"></div>
             </section>
         </div>
     </main>
 
+    <!-- Футер -->
     <footer class="footer">
-        <p>&copy; 2026 Святослав Князев. Все права защищены.</p>
+        <div class="container">
+            <p>&copy; 2024 Александр Петров. Все права защищены.</p>
+        </div>
     </footer>
+
+    <!-- Подключение JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
