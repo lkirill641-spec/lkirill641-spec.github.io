@@ -1,90 +1,178 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Обо мне - Мой сайт</title>
+    <title>Святослав Князев | Веб-разработчик</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Навигация -->
     <nav class="navigation">
-        <a href="index.html" class="nav-link active">Обо мне</a>
-        <a href="contacts.html" class="nav-link">Контакты</a>
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">👨‍</span>
+                <span class="logo-text">Portfolio</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active">Главная</a></li>
+                <li><a href="contacts.html" class="nav-link">Контакты</a></li>
+            </ul>
+        </div>
     </nav>
 
+    <!-- Hero секция -->
     <header class="hero">
-        <div class="container">
-            <h1 class="fade-in">Привет! Меня зовут <span class="highlight">Святослав Князев</span></h1>
-            <p class="subtitle">Веб-разработчик & Дизайнер</p>
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    Привет! Я <span class="gradient-text">Святослав Князев</span>
+                </h1>
+                <p class="hero-subtitle">Frontend Developer & UI/UX Designer</p>
+                <div class="hero-buttons">
+                    <a href="contacts.html" class="btn btn-primary">
+                        <span>Связаться</span>
+                        <span class="btn-icon">→</span>
+                    </a>
+                </div>
+            </div>
         </div>
     </header>
 
-    <main class="container">
-        <section class="about-section">
-            <h2 class="section-title">Обо мне</h2>
-            <div class="about-content">
-                <div class="info-card hover-effect">
-                    <h3>🎓 Образование</h3>
-                    <p>Студент университета, изучаю веб-разработку и дизайн. Осваиваю HTML, CSS, JavaScript и современные фреймворки.</p>
+    <!-- Обо мне -->
+    <section class="about section" id="about">
+        <div class="container">
+            <h2 class="section-title">👤 Обо мне</h2>
+            <p class="about-description">
+                Я — начинающий <strong class="highlight">веб-разработчик</strong>, увлечённый созданием 
+                красивых и функциональных сайтов. Постоянно учусь новому и стремлюсь к совершенству.
+            </p>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Проектов</div>
                 </div>
-                
-                <div class="info-card hover-effect">
-                    <h3>🏆 Достижения</h3>
-                    <ul class="achievements-list">
-                        <li>🥇 Победитель хакатона 2024</li>
-                        <li>📜 Сертификат по веб-дизайну</li>
-                        <li>⭐ 50+ выполненных проектов</li>
-                        <li>🎯 Средний балл 4.8</li>
-                    </ul>
+                <div class="stat-card">
+                    <div class="stat-number">5</div>
+                    <div class="stat-label">Месяцев опыта</div>
                 </div>
+                <div class="stat-card">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Отдачи</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                <div class="info-card hover-effect">
-                    <h3>🎨 Увлечения</h3>
-                    <div class="hobbies-grid">
-                        <span class="hobby-tag">Программирование</span>
-                        <span class="hobby-tag">Фотография</span>
-                        <span class="hobby-tag">Музыка</span>
-                        <span class="hobby-tag">Спорт</span>
-                        <span class="hobby-tag">Путешествия</span>
-                        <span class="hobby-tag">Чтение</span>
+    <!-- Достижения -->
+    <section class="achievements section" id="achievements">
+        <div class="container">
+            <h2 class="section-title">🏆 Достижения</h2>
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <div class="achievement-icon">🥇</div>
+                    <h3>Победитель хакатона</h3>
+                    <p>1 место на университетском хакатоне 2024</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">📜</div>
+                    <h3>Сертификат по веб-дизайну</h3>
+                    <p>Успешное завершение курса UI/UX дизайна</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">⭐</div>
+                    <h3>50+ проектов</h3>
+                    <p>Выполненных учебных и личных проектов</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">🎯</div>
+                    <h3>Средний балл 4.8</h3>
+                    <p>Отличная успеваемость в университете</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Навыки -->
+    <section class="skills section" id="skills">
+        <div class="container">
+            <h2 class="section-title">💼 Навыки</h2>
+            <div class="skills-container">
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name">HTML5</span>
+                        <span class="skill-percent">90%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%"></div>
                     </div>
                 </div>
-
-                <div class="info-card hover-effect">
-                    <h3>💼 Навыки</h3>
-                    <div class="skills-container">
-                        <div class="skill-item">
-                            <span>HTML/CSS</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>JavaScript</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 70%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>Git/GitHub</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 75%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>UI/UX Design</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 65%"></div>
-                            </div>
-                        </div>
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name">CSS3</span>
+                        <span class="skill-percent">85%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 85%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name">JavaScript</span>
+                        <span class="skill-percent">70%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 70%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name">Git/GitHub</span>
+                        <span class="skill-percent">75%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 75%"></div>
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
+    <!-- Увлечения -->
+    <section class="hobbies section" id="hobbies">
+        <div class="container">
+            <h2 class="section-title">🎨 Увлечения</h2>
+            <div class="hobbies-grid">
+                <div class="hobby-card">
+                    <div class="hobby-icon">💻</div>
+                    <h3>Программирование</h3>
+                    <p>Создание веб-приложений</p>
+                </div>
+                <div class="hobby-card">
+                    <div class="hobby-icon">📸</div>
+                    <h3>Фотография</h3>
+                    <p>Уличная и портретная</p>
+                </div>
+                <div class="hobby-card">
+                    <div class="hobby-icon">🎵</div>
+                    <h3>Музыка</h3>
+                    <p>Игра на гитаре</p>
+                </div>
+                <div class="hobby-card">
+                    <div class="hobby-icon">⚽</div>
+                    <h3>Спорт</h3>
+                    <p>Футбол и бег</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
     <footer class="footer">
-        <p>&copy; 2026 Святослав Князев. Все права защищены.</p>
+        <div class="container">
+            <p>&copy; 2024 Александр Петров. Все права защищены.</p>
+        </div>
     </footer>
 </body>
 </html>
